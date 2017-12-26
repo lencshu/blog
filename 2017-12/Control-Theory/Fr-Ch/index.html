@@ -383,7 +383,7 @@
 <meta property="og:image" content="https://lencshu.github.io/gliang.eu/2017-12/Control-Theory/Fr-Ch/images/cap_20171222_160122.png">
 <meta property="og:image" content="https://lencshu.github.io/gliang.eu/2017-12/Control-Theory/Fr-Ch/images/cap_20171222_160234.png">
 <meta property="og:image" content="https://lencshu.github.io/gliang.eu/2017-12/Control-Theory/Fr-Ch/images/cap_20171222_160303.png">
-<meta property="og:updated_time" content="2017-12-26T13:49:23.390Z">
+<meta property="og:updated_time" content="2017-12-26T13:51:58.155Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Control Theory">
 <meta name="twitter:description" content="!!! hint “总述”        En automatique, un asservissement est un système dont l’objet principal est d’atteindre le plus rapidement possible sa valeur de consigne et de la maintenir, quelles que soient le">
@@ -488,7 +488,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -498,7 +498,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -572,7 +572,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-25T18:36:40+01:00">
                 2017-12-26
@@ -1554,21 +1554,28 @@
 </ul>
 </li>
 </ul>
-<div class="note info"><p>!!! hint “思路：”</p>
-<pre><code>- 构建processus的传递函数
-- 根据CdCs构建要求的传递函数
-- 通过线性方程求corresctur的参数
-    + déterminer les polynômes $\Theta$(z) et $\Pi$(z) de l&#39;équation Diophantienne $D_{BF}(z)=N^{-}(z)\Theta(z)+ D^{-}(z)S_{r}(z)\Pi(z)$ 
-    + Erreur position nulle , il faut donc un intégrateur Sr=(1-z^-1)
-    + Erreur de vitesse = 0.5 $\Rightarrow$ ev = $\frac{D^{-}(1).Ky(1).PI(1)}{DBF(1)}$ `DBF(1)=sum(D1d)` pour une rampe `Ky(1)=Te`
-- 构建corresteur K(z)
-    + $K(z)=\frac{D^{+}(z)S_{m}(z)\Theta(z)}{N^{+}(z)S_{r}(z)\Pi(z)}$
-    + 其中:
-        * $D^{+}(z): Processus的TF方程的分母 \Rightarrow$ Dstable=tf(F0d.den{1},1,Te)
-        * $S_{m}(z)$: 有integrateur:$(1-z^{-1})$没:1
-        * $\Theta(z)$: 求解线性方程所得的 $\Pi$ 值的集合 $\Rightarrow$ Theta=tf(theta,1,Te)
-        * $N^{+}(z)$: Processus的TF方程的 `增益k$$\times$$[1 零点的相反数]` $\Rightarrow$ [z0,k0]=zero(F0d); Nstable=tf(1,k0*[1 -z0],Te) 
-</code></pre></div>
+<div class="note info"><p>思路：</p>
+<ul>
+<li>构建processus的传递函数</li>
+<li>根据CdCs构建要求的传递函数</li>
+<li>通过线性方程求corresctur的参数<ul>
+<li>déterminer les polynômes $\Theta$(z) et $\Pi$(z) de l’équation Diophantienne $D_{BF}(z)=N^{-}(z)\Theta(z)+ D^{-}(z)S_{r}(z)\Pi(z)$ </li>
+<li>Erreur position nulle , il faut donc un intégrateur Sr=(1-z^-1)</li>
+<li>Erreur de vitesse = 0.5 $\Rightarrow$ ev = $\frac{D^{-}(1).Ky(1).PI(1)}{DBF(1)}$ <code>DBF(1)=sum(D1d)</code> pour une rampe <code>Ky(1)=Te</code></li>
+</ul>
+</li>
+<li>构建corresteur K(z)<ul>
+<li>$K(z)=\frac{D^{+}(z)S_{m}(z)\Theta(z)}{N^{+}(z)S_{r}(z)\Pi(z)}$</li>
+<li>其中:<ul>
+<li>$D^{+}(z): Processus的TF方程的分母 \Rightarrow$ Dstable=tf(F0d.den{1},1,Te)</li>
+<li>$S_{m}(z)$: 有integrateur:$(1-z^{-1})$没:1</li>
+<li>$\Theta(z)$: 求解线性方程所得的 $\Pi$ 值的集合 $\Rightarrow$ Theta=tf(theta,1,Te)</li>
+<li>$N^{+}(z)$: Processus的TF方程的 <code>增益k$$\times$$[1 零点的相反数]</code> $\Rightarrow$ [z0,k0]=zero(F0d); Nstable=tf(1,k0*[1 -z0],Te) </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div>
 <figure class="highlight matlab"><figcaption><span>hl_lines</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%%%% Le processus analogique TFBO</span></span><br><span class="line">Te=<span class="number">0.72</span>; <span class="comment">% Période échantillonnage</span></span><br><span class="line">w0=<span class="number">0.8</span>; <span class="comment">% pulsation propre du processus en BO</span></span><br><span class="line">m=<span class="number">0.1</span>;   <span class="comment">% coefficient d'amortissement</span></span><br><span class="line">T0=<span class="number">1</span>;   <span class="comment">% gain statique</span></span><br><span class="line"></span><br><span class="line">num0=[T0];</span><br><span class="line">den0=[<span class="number">1</span>/w0^<span class="number">2</span> <span class="number">2</span>*m/w0 <span class="number">1</span>];</span><br><span class="line">F0=tf(num0,den0)    <span class="comment">% F0(p)</span></span><br><span class="line">F0d=c2d(F0,Te)      <span class="comment">% discrétisation de la fonction de transfert en BO</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% T0d=zpk(F0d);</span></span><br><span class="line"><span class="comment">% [z0d,p0d,k0]=zpkdata(T0d)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%%%% FTBF fixé par le cahier des charges</span></span><br><span class="line">w1=<span class="number">1.4</span> ; <span class="comment">% pulsation propre du processus en BF</span></span><br><span class="line">m1=<span class="number">0.8</span>;  <span class="comment">% coefficient d'amortissement</span></span><br><span class="line">num1=[<span class="number">1</span>];</span><br><span class="line">den1=[<span class="number">1</span>/w1^<span class="number">2</span> <span class="number">2</span>*m1/w1 <span class="number">1</span>];</span><br><span class="line">F1=tf(num1,den1)</span><br><span class="line">F1d=c2d(F1,Te) <span class="comment">% Discrétisation de la fonction de transfert en BF </span></span><br><span class="line"><span class="comment">% [z1d,p1d,T1d]=zpkdata(F1d) % liste zéro - pôle - gain</span></span><br><span class="line"></span><br><span class="line">[D1d]=F1d.den&#123;<span class="number">1</span>&#125; <span class="comment">% D1d=z^2+D1d(2)*z+D1d(3)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%%%% Coefs du correcteur</span></span><br><span class="line">ev=<span class="number">0.5</span>; <span class="comment">% erreur de vitesse en régime permanent</span></span><br><span class="line">DBF1=sum(D1d) <span class="comment">% =DBF(1)</span></span><br><span class="line"><span class="comment">%% Résolution du système linéaire </span></span><br><span class="line"><span class="comment">% 不存在积分器</span></span><br><span class="line">A=[<span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>;<span class="number">1</span> <span class="number">0</span> <span class="number">-1</span> <span class="number">1</span>;<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">-1</span>;<span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span>]</span><br><span class="line"><span class="comment">% 存在一个积分器</span></span><br><span class="line"><span class="comment">% A=[1 0 1 0;0 1 -1 1;0 0 0 -1; 0 0 1 1];</span></span><br><span class="line">B=[<span class="number">1</span>;D1d(<span class="number">2</span>);D1d(<span class="number">3</span>);ev*DBF1/Te]</span><br><span class="line">Sol=A\B <span class="comment">% Solution du système</span></span><br><span class="line">theta0=Sol(<span class="number">1</span>);</span><br><span class="line">theta1=Sol(<span class="number">2</span>);</span><br><span class="line">pI0=Sol(<span class="number">3</span>);</span><br><span class="line">pI1=Sol(<span class="number">4</span>);</span><br><span class="line">theta=[theta0 theta1]; <span class="comment">%polynôme theta(z)=theta0*z+theta1</span></span><br><span class="line">pI=[pI0 pI1]; <span class="comment">%polunôme pI(z)=pI0*z+pI1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%%%% Réalisation du correcteur</span></span><br><span class="line"><span class="comment">%%% K(z)=[Dstable(z)Sm(z)Theta(z)]/[Nstable(z)Sr(z)Pi(z)] D和N交换位置</span></span><br><span class="line">Ds=F0d.den&#123;<span class="number">1</span>&#125; ;</span><br><span class="line"><span class="comment">%获取的系数需要再Z转换</span></span><br><span class="line">Dstable=tf(Ds,<span class="number">1</span>,Te)</span><br><span class="line">Sm=<span class="number">1</span>;	<span class="comment">% pas d'integrateur</span></span><br><span class="line">Theta=tf(theta,<span class="number">1</span>,Te)</span><br><span class="line"></span><br><span class="line">[z0,k0]=zero(F0d); <span class="comment">%return zero point of sys F0d</span></span><br><span class="line">Ns=k0*[<span class="number">1</span> -z0]; </span><br><span class="line">Nstable=tf(<span class="number">1</span>,Ns,Te)<span class="comment">% 1/N+(z)</span></span><br><span class="line">Sr=[<span class="number">1</span> <span class="number">-1</span>]; <span class="comment">% un integrateur</span></span><br><span class="line">tfSr=tf(<span class="number">1</span>,Sr,Te)	<span class="comment">% Sr(z)</span></span><br><span class="line">Pi=tf(<span class="number">1</span>,pI,Te) <span class="comment">% 1/pI(z)</span></span><br><span class="line"></span><br><span class="line">K=Dstable*Theta*Nstable*tfSr*Pi</span><br><span class="line"></span><br><span class="line"><span class="comment">%%%% Extraction simulink</span></span><br><span class="line">NK=K.num&#123;<span class="number">1</span>&#125;</span><br><span class="line">DK=K.den&#123;<span class="number">1</span>&#125;</span><br><span class="line"></span><br><span class="line">NP=F0d.num&#123;<span class="number">1</span>&#125;</span><br><span class="line">DP=F0d.den&#123;<span class="number">1</span>&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="TD习题-1"><a href="#TD习题-1" class="headerlink" title="TD习题"></a>TD习题</h2><h3 id="TD03"><a href="#TD03" class="headerlink" title="TD03"></a>TD03</h3><h3 id="TD04-1"><a href="#TD04-1" class="headerlink" title="TD04"></a>TD04</h3><p><img src="images\cap_20171130_121908.png" alt=""></p>
 <h3 id="TD05"><a href="#TD05" class="headerlink" title="TD05"></a>TD05</h3><ul>
@@ -1776,10 +1783,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -1800,7 +1807,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/gliang.eu/archives/">
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -1870,7 +1877,7 @@
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
