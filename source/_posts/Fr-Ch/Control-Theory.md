@@ -16,7 +16,7 @@ mathjax: true
 
 {% endnote %}
 
-# 总结
+<!-- more -->
 
 # Part A 连续信号处理
 
@@ -47,16 +47,18 @@ suivant,
 特征方程就可以写成
 ![](images\cap_20171023_213403.png)
 
-!!! Question "Q1"
-		![](images\cap_20171023_212640.png)
-		Pourquoi `Zi` et `Pj`???
-
-!!! Caution "结论"
-		特征方程的根(FTBF的pôle)取决于取决于K的值，该值通过以下方程与FTBO的K相关联。而FTBF的零点不受K的影响
-		![](images\cap_20171023_215832.png)
-		图示
-		![](images\cap_20171023_220909.png)
-
+{% note success %}
+	"Q1"
+![](images\cap_20171023_212640.png)
+Pourquoi `Zi` et `Pj`???
+{% endnote %}
+{% note success %}
+	"结论"
+特征方程的根(FTBF的pôle)取决于取决于K的值，该值通过以下方程与FTBO的K相关联。而FTBF的零点不受K的影响
+![](images\cap_20171023_215832.png)
+图示
+![](images\cap_20171023_220909.png)
+{% endnote %}
 ### 1.3 Lieu d’Evans 
 
 由于伺服系统的性能直接取决于`开环系统`的K, 通常通过调试该数值以获取系统的其他指标参数。
@@ -75,44 +77,48 @@ FTBF的pôle是在空间一系列点，对应K值从小到大的变化。
 该条件可翻译如下：
 ![](images\cap_20171023_225822.png)
 
-!!! hint "注意"
-
-		如果不存在零点，则分子为1
-
+{% note success %}
+	"注意"
+如果不存在零点，则分子为1
+{% endnote %}
 该条件可翻译成图像为：
 ![](images\cap_20171023_231344.png)
 
-!!! Question "Q2"
-		Z1 ？？？
-
+{% note success %}
+	"Q2"
+Z1 ？？？
+{% endnote %}
 RLtool de Matlab
 
 #### 1.3.2  exemples a)
 ![](images\cap_20171023_232003.png)
 
 
-!!! Note "解答"
-		该FTBO：
-		1. 无零点
-		2. 有两个极值 `p1=0 p2=-4`
-		3. 由特征方程`1+T[p]=0`可得多项式
-		![](images\cap_20171023_232517.png)
-		该多项式的零点是FTBF的pôle.
-		把k的值从0到16每隔4取一个列表如下
-		![](images\cap_20171023_235404.png)
-			3.1 当k=0时，FTBO和BTBF的pôle相同
-			3.2 当k=4时，实数值和虚数值的交界处，在该点处`ξ的值等于1`
-			![](images\cap_20171024_000518.png)
-			验证M的条件：
-			![](images\cap_20171024_001455.png)
-
-	!!! hint "复平面的性质"
-			**不同的质量标准决定了阻尼amortissement：`ξ≥0.5`**
-			**速度标准定义了这种关系：`ξω≥3/tr5%`**
-			图示如下，
-			![](images\cap_20171024_001312.png)
+{% note success %}
+	"解答"
+该FTBO：
+1. 无零点
+2. 有两个极值 `p1=0 p2=-4`
+3. 由特征方程`1+T[p]=0`可得多项式
+![](images\cap_20171023_232517.png)
+该多项式的零点是FTBF的pôle.
+把k的值从0到16每隔4取一个列表如下
+![](images\cap_20171023_235404.png)
+3.1 当k=0时，FTBO和BTBF的pôle相同
+3.2 当k=4时，实数值和虚数值的交界处，在该点处`ξ的值等于1`
+![](images\cap_20171024_000518.png)
+验证M的条件：
+![](images\cap_20171024_001455.png)
+{% endnote %}
+{% note success %}
+	"复平面的性质"
+**不同的质量标准决定了阻尼amortissement：`ξ≥0.5`**
+**速度标准定义了这种关系：`ξω≥3/tr5%`**
+图示如下，
+![](images\cap_20171024_001312.png)
 
 #### 1.3.2  exemples b)
+{% endnote %}
 Un système à contrôler a comme fonction transfert en boucle ouverte (avec retour 
 unitaire): 
 ![](images\cap_20171030_192008.png)
@@ -135,13 +141,16 @@ p2=-kesi*omega0mini-1i*omega0mini*sqrt(1-kesi^2);
 ~~~
 ![](images\cap_20171111_135924.png)
 
-!!! Danger ""
-	点P3应在M点的左侧
+{% note success %}
+	""
+点P3应在M点的左侧
 ![](images\cap_20171111_135255.png)
+{% endnote %}
 
-!!! hint "求pôles dominants公式:"
-		![](images\cap_20171111_134515.png)
-
+{% note success %}
+	"求pôles dominants公式:"
+![](images\cap_20171111_134515.png)
+{% endnote %}
 验证特征
 ![](images\cap_20171111_140754.png)
 
@@ -149,10 +158,11 @@ p2=-kesi*omega0mini-1i*omega0mini*sqrt(1-kesi^2);
 ![](images\cap_20171111_141153.png)
 
 
-!!! attention "结论"
-	En règle générale, il est admis que lorsque le module du pôle réel p3 reste supérieur ou égal à 10 fois le module de la partie réelle des racines complexes conjuguées, le troisième ordre est assimilable à un système du deuxième ordre. 
-	当实数极值≥10倍复数极值的实数部分,那么三阶系统与二阶系统相似。
-
+{% note success %}
+	"结论"
+En règle générale, il est admis que lorsque le module du pôle réel p3 reste supérieur ou égal à 10 fois le module de la partie réelle des racines complexes conjuguées, le troisième ordre est assimilable à un système du deuxième ordre. 
+当实数极值≥10倍复数极值的实数部分,那么三阶系统与二阶系统相似。
+{% endnote %}
 
 
 
@@ -169,12 +179,14 @@ p2=-kesi*omega0mini-1i*omega0mini*sqrt(1-kesi^2);
 Mise sous forme d’état (voir annexe ou cours MC53) 
 ![](images\cap_20171111_153234.png)
 
-!!! hint "D"
-	D est la matrice de transmission directe ou matrice de couplage entrées-sorties.Dans de nombreux cas elle est identiquement nulle puisqu'elle représente le cas particuliers des liaisons qui sont la limite du principe de causalité. 通常D为0，因为该矩阵表明特例情况下因果关系的限制关系
-
-!!! Danger ""
-	开环传递函数的极点就是系统矩阵A的特征值
-
+{% note success %}
+	"D"
+D est la matrice de transmission directe ou matrice de couplage entrées-sorties.Dans de nombreux cas elle est identiquement nulle puisqu'elle représente le cas particuliers des liaisons qui sont la limite du principe de causalité. 通常D为0，因为该矩阵表明特例情况下因果关系的限制关系
+{% endnote %}
+{% note success %}
+	""
+开环传递函数的极点就是系统矩阵A的特征值
+{% endnote %}
 #### 2.1.1  选择状态变量 
 Sélection des variables d’état 
 
@@ -207,10 +219,12 @@ Soit un système considéré représenté par la FT(représentation dite externe
 ![](images\cap_20171111_164951.png)
 ![](images\cap_20171111_165528.png)
 
-!!! hint "remarque"
-	lorsque m = n, alors on procède à une division polynomiale pour obtenir une nouvelle FT, Go[p]  ,dont le d°N sera strictement inférieur à d°D. Ensuite on procède comme précédemment en utilisant la nouvelle FT Go[p] :
-	![](images\cap_20171111_170022.png)
+{% note success %}
+	"remarque"
+lorsque m = n, alors on procède à une division polynomiale pour obtenir une nouvelle FT, Go[p]  ,dont le d°N sera strictement inférieur à d°D. Ensuite on procède comme précédemment en utilisant la nouvelle FT Go[p] :
+![](images\cap_20171111_170022.png)
 #### 2.1.4  状态表示到转换方程 
+{% endnote %}
 De la représentation d’état à la FT 
 ![](images\cap_20171111_170151.png)
 ### 2.2  系统的可控性和可观性 
@@ -235,44 +249,49 @@ Contrôlabilité(ou Commandabilité)
 	- 或者说如果该系统无论初始状态Xo或初始时刻是何值都是可控的，那么为完全可控。
 - Pour les systèmes linéaires et invariants dans le temps, une condition nécessaire et suffisante de contrôlabilité a été donnée par Kalman et dépend uniquement de la paire (A, B). 对于线性时不变系统来说，kalman定义:可控性的充分必要条件只取决于(A,B). Cette condition se résume à ce que la matrice de commandabilité suivante :  
 	
-!!! attention "判定可控性的充分必要条件"
-	$C_{o} = [𝑩, 𝑨𝑩 , …, 𝑨^{𝒏−𝟏}𝑩]$ soit de **rang(秩) n**
-	Le paramètre n étant le nombre de variables d'état dans le vecteur d’état X
-	**`秩就是矩阵中线性独立横行的数目`**
-
+{% note success %}
+	"判定可控性的充分必要条件"
+$C_{o} = [𝑩, 𝑨𝑩 , …, 𝑨^{𝒏−𝟏}𝑩]$ soit de **rang(秩) n**
+Le paramètre n étant le nombre de variables d'état dans le vecteur d’état X
+**`秩就是矩阵中线性独立横行的数目`**
+{% endnote %}
 ##### 举例说明
 ![](images\cap_20171111_213929.png)
 ![](images\cap_20171111_214241.png)
 
-!!! Caution "可控性的判定条件"
-	- **rank($C_{o}$)==rank(X)**
-    - **det($C_{o}$) ≠ 0**	
-
+{% note success %}
+	"可控性的判定条件"
+- **rank($C_{o}$)==rank(X)**
+- **det($C_{o}$) ≠ 0**	
+{% endnote %}
 #### 2.2.2 系统的可观性
 Observabilité 
 
 - Le concept d’observabilité est en quelque sorte le dual de celui de la commandabilité. En effet, l’observabilité consiste à déduire l’état initial X(t0) du système à partir des observations des grandeurs de sortie du système sur un intervalle de temps suffisamment long [t0, t1]. 
 可观性的对偶概念是可控性。事实上，可观性需要从系统的输出量推断其在足够长的时间间隔上的初始状态。
 
-!!! attention "判定可观性的充分必要条件"
-	$O_{b} = [C; CA; CA^{2}; …; C^{𝒏−𝟏}A]$ soit de **rang(秩) n**
-	Le paramètre n étant le nombre de variables d'état dans le vecteur d’état X (la dimension du vecteur état)
-	**`秩就是矩阵中线性独立横行的数目`**
-
+{% note success %}
+	"判定可观性的充分必要条件"
+$O_{b} = [C; CA; CA^{2}; …; C^{𝒏−𝟏}A]$ soit de **rang(秩) n**
+Le paramètre n étant le nombre de variables d'état dans le vecteur d’état X (la dimension du vecteur état)
+**`秩就是矩阵中线性独立横行的数目`**
+{% endnote %}
 ##### 举例说明
 ![](images\cap_20171111_213929.png)
 ![](images\cap_20171111_221139.png)
 
-!!! Caution "可观性的判定条件"
-	- **rank($C_{o}$)==rank(X)**
-    - **det($C_{o}$) ≠ 0**	
-
+{% note success %}
+	"可观性的判定条件"
+- **rank($C_{o}$)==rank(X)**
+- **det($C_{o}$) ≠ 0**	
+{% endnote %}
 #### 可控性可观性总结及matlab程序
 
-!!! Attention ""
-	- 可控制性是指可以利用输入将系统由初始状态转换成任意的最终状态
-	- 可观察性是指系统的输出轨迹预测其初始状态
-
+{% note success %}
+	""
+- 可控制性是指可以利用输入将系统由初始状态转换成任意的最终状态
+- 可观察性是指系统的输出轨迹预测其初始状态
+{% endnote %}
 - Matlab observable controlable
 
 ~~~c
@@ -344,10 +363,11 @@ La méthode algébrique de résolution développée par `Ackermann` s’appuie s
 La formule d’Ackermann qui permet la détermination de la matrice K dans le cas scalaire est donnée par
 ![](images\cap_20171113_140251.png)
 
-!!! Caution "重要"
-	La présence de la matrice inverse de la contrôlabilité s’explique par le fait que le système doit être complètement contrôlable (à vérifier à chaque fois !!!).Il en résulte alors que la contrôlabilité du système est une condition nécessaire et suffisante à l’existence de la matrice K.
-	可控性矩阵的逆矩阵要求系统完全可控（每次都要验证！）。矩阵K存在的充分必要条件是系统可控。
-
+{% note success %}
+	"重要"
+La présence de la matrice inverse de la contrôlabilité s’explique par le fait que le système doit être complètement contrôlable (à vérifier à chaque fois !!).Il en résulte alors que la contrôlabilité du système est une condition nécessaire et suffisante à l’existence de la matrice K.
+可控性矩阵的逆矩阵要求系统完全可控（每次都要验证！）。矩阵K存在的充分必要条件是系统可控。
+{% endnote %}
 同时，$Co^{-1}$的存在也导致求解Ackermann方程的困难。Pour `contourner` cette difficulté:
 
 - Trouver la matrice $d^{T} = (d_{1}, … , d_{n})$ en utilisant l’équation suivante :
@@ -418,18 +438,20 @@ K = place(A,B,p)
 sous Simulink:
 ![](images\cap_20171113_145646.png)
 
-!!! Danger "重要"
-	Simulink
-	Pour le block de K, faut au'on utilise `Matrix(K*u)`
-
-!!! hint "注意"
-	我们也可以用代数的方法计算矩阵N(决定系统的静态特征)
-	1. 闭环系统方程
-	![](images\cap_20171113_150148.png)
-	![](images\cap_20171113_150437.png)
-	2. 假设输入r(t)为常数$r_{ref}$，那么y(t)=$r_{ref}$当t趋近无穷大。所以就有：
-	![](images\cap_20171113_151035.png)
-
+{% note success %}
+	"重要"
+Simulink
+Pour le block de K, faut au'on utilise `Matrix(K*u)`
+{% endnote %}
+{% note success %}
+	"注意"
+我们也可以用代数的方法计算矩阵N(决定系统的静态特征)
+1. 闭环系统方程
+![](images\cap_20171113_150148.png)
+![](images\cap_20171113_150437.png)
+2. 假设输入r(t)为常数$r_{ref}$，那么y(t)=$r_{ref}$当t趋近无穷大。所以就有：
+![](images\cap_20171113_151035.png)
+{% endnote %}
 #### 2.3.3  Etude d’un système MIMO
 
 例题
@@ -472,12 +494,15 @@ Pôles =
 N=1/(C*inv(-A+B*K)*B)
 ~~~
 
-!!! hint "Netoyer"
-	`clear`: workspace
-	`clc`:console
-!!! Question ""
-	通过该示例可看出pole的选择接近无穷。如果想获得合理的结果，C’est en utilisant un critère d’optimisation quadratique qu’on répondra à cette question 需要使用二次优化原则。
-
+{% note success %}
+	"Netoyer"
+`clear`: workspace
+`clc`:console
+{% endnote %}
+{% note success %}
+	""
+通过该示例可看出pole的选择接近无穷。如果想获得合理的结果，C’est en utilisant un critère d’optimisation quadratique qu’on répondra à cette question 需要使用二次优化原则。
+{% endnote %}
 #### 2.3.4  Reconstructeur d’état ou observateur
 
 - 线性连续系统的稳定默认所有的变量都是可以获取的，但这几乎不存在。就算状态变量都是可测量的，传感器的延迟等因素也不能保证可以建立准确的状态反馈。
@@ -514,9 +539,10 @@ rappel:
 
 事实上，纠正器K的性能取决于状态的评估，所以显然状态评估值可以迅速变化为实际值。结果就是，观测器的pôle dominant会在纠正器correcteur的左侧。通常，倍率10就足够大到可以保证估计值可以收敛到实际值。
 
-!!! danger ""
-	确保系统是可控的！
-
+{% note success %}
+	""
+确保系统是可控的！
+{% endnote %}
 
 例题
 
@@ -579,33 +605,45 @@ vecteurs $\hat{X}$(t) et $\hat{\dot{X}}$
 Ces deux équations peuvent être écrites sous la forme habituelle associée à un système linéaire continu, soit :
 ![](images\cap_20171113_181555.png)
 
-!!! hint "remarque"
-	如果系统完全可测，那么观测器可以写成
-	![](images\cap_20171113_182308.png)
-	F1和F2相同 --> 观测器在输入输出端不可见
-	Ces deux fonction de transfert F1[p] et F2[p] sont identiques. Ce qui veut dire que l’observateur est « invisible » du point de vue entrée-sortie.
+{% note success %}
+	"remarque"
+如果系统完全可测，那么观测器可以写成
+![](images\cap_20171113_182308.png)
+F1和F2相同 --> 观测器在输入输出端不可见
+Ces deux fonction de transfert F1[p] et F2[p] sont identiques. Ce qui veut dire que l’observateur est « invisible » du point de vue entrée-sortie.
+{% endnote %}
 
 
+{% note success %}
+	"Procédure de conception d’un retour d’état avec observateur : "
+{% endnote %}
+{% note success %}
+	"Première étape :"
+**第一步：可控性**
+Vérifier la commandabilité et l’observabilité du système
+{% endnote %}
+{% note success %}
+	"Deuxième étape : "
+**第二步：通过选取pôle(根据CDC)来决定矩阵K**
+Déterminer  la  matrice  de  contre  réaction  K  en  prenant  des  positions  de  pôles  qui  vous semblent les plus intéressantes par rapport au cahier des charges.(amortissement et temps de réponse). 
+{% endnote %}
+{% note success %}
+	"Troisième étape : "
+**第三步：放大10倍作为pôle来计算矩阵L**
+Déterminer la matrice L en choisissant des pôles dominants dans un rapport de 10 par rapport aux pôles dominant du système. 
+{% endnote %}
+{% note success %}
+	"Quatrième étape :"
+**第四步：构建系统**
+Construire votre système global comme sur la figure ci-après. 
+![](images\cap_20171113_183117.png)
+{% endnote %}
+{% note success %}
+	"Cinquième étape :"
+**第五步：分析并调整pôle**
+Analyser les résultats et réajuster les placements des pôles si besoin.
 
-!!! unknow "Procédure de conception d’un retour d’état avec observateur : "
-	!!! note "Première étape :"
-		**第一步：可控性**
-		Vérifier la commandabilité et l’observabilité du système
-	!!! note "Deuxième étape : "
-		**第二步：通过选取pôle(根据CDC)来决定矩阵K**
-		Déterminer  la  matrice  de  contre  réaction  K  en  prenant  des  positions  de  pôles  qui  vous semblent les plus intéressantes par rapport au cahier des charges.(amortissement et temps de réponse). 
-	!!! note "Troisième étape : "
-		**第三步：放大10倍作为pôle来计算矩阵L**
-		Déterminer la matrice L en choisissant des pôles dominants dans un rapport de 10 par rapport aux pôles dominant du système. 
-	!!! note "Quatrième étape :"
-		**第四步：构建系统**
-		Construire votre système global comme sur la figure ci-après. 
-		![](images\cap_20171113_183117.png)
-	!!! note "Cinquième étape :"
-		**第五步：分析并调整pôle**
-		Analyser les résultats et réajuster les placements des pôles si besoin.
-
-
+{% endnote %}
 
 #### 2.3.6 Intégrale 状态反馈控制
 Commande par retour d’état avec action intégrale
@@ -626,8 +664,9 @@ d'où
 
 $$\dot{Z}_{(t)}=(\hat{A}-\hat{B}\tilde{K})Z(t)+\hat{D} e(t)$$
 
-!!! hint "l’objectif de la commande est double"
-
+{% note success %}
+	"l’objectif de la commande est double"
+{% endnote %}
 	1. Assurer la stabilité du système augmenté ( et donc plus particulièrement le système original) en boucle fermée
 	2. Assurer une erreur nulle en régime permanent :
 	![](images\cap_20171113_195506.png)
@@ -871,18 +910,21 @@ $\varepsilon$= x − $\hat{X}(t)$
 
 La matrice d’évolution est bloc-triangulaire. Ses valeurs propres sont les valeurs propres des blocs de la diagonale : [A−BKo],[A−KfC] . Les dynamiques du retour d’état d’une part, et de l’observateur d’autre part, sont séparées : on peut régler les valeurs propres de la commande par la matrice de retour d’état K, de façon indépendante des valeurs propres de l’observateur que l’on règle par le choix de la matrice Kf. C’est le principe de séparation.
 
-!!! hint "重要结论"
-	LQ和卡尔曼滤波器可以分开计算。
-	Conclusion très importante :
-	La commande par retour d’état LQ et le filtre de Kalman peuvent être déterminés séparément.
-
-	!!! Note ""
-		LQG的结构是由如下关系给定的
-		![](images\cap_20171114_154228.png)
-		或可图示如下
-		![](images\cap_20171114_154334.png)
+{% note success %}
+	"重要结论"
+LQ和卡尔曼滤波器可以分开计算。
+Conclusion très importante :
+La commande par retour d’état LQ et le filtre de Kalman peuvent être déterminés séparément.
+{% endnote %}
+{% note success %}
+	""
+LQG的结构是由如下关系给定的
+![](images\cap_20171114_154228.png)
+或可图示如下
+![](images\cap_20171114_154334.png)
 
 - Matlab LQG
+{% endnote %}
 
 	[Kf,P,E]=lqe(A,M,C,Qk,Rk)
 
@@ -906,9 +948,10 @@ Exemple afin d’illustrer notre propos
 建模
 ![](images\cap_20171117_010643.png)
 
-!!! hint ""
-	负号意味着湿度与温度变化相反
-
+{% note success %}
+	""
+负号意味着湿度与温度变化相反
+{% endnote %}
 合并最后两项得：
 ![](images\cap_20171117_010726.png)
 
@@ -957,9 +1000,10 @@ eig(A-B*K);
 Le niveau haut de la saturation définissant l’ouverture maxi de la vanne est : π/2 
 Le niveau bas : 0
 
-!!! hint ""
-	修改solver
-
+{% note success %}
+	""
+修改solver
+{% endnote %}
 接下来在LQ中加入建模和测量噪声来观察集成滤波器的必要性
 ![](images\cap_20171117_012759.png)
 
@@ -967,9 +1011,10 @@ Le niveau bas : 0
 ![](images\cap_20171117_013138.png)
 ![](images\cap_20171117_014152.png)
 
-!!! hint ""
-	Noise Power = Variance * Période d’échantillonnage
-
+{% note success %}
+	""
+Noise Power = Variance * Période d’échantillonnage
+{% endnote %}
 
 确定协方差矩阵V：
 ![](images\cap_20171117_014319.png)
@@ -1014,87 +1059,6 @@ V=[0.1 0 0;0 0.01 0; 0 0 7.46];
 ## VI) Simulations numériques 
 ### 6.1 Software In the Loop :SIL
 ### 6.2 Hardware In the Loop :HIL
-
-# 附录 A
-## I 英法对照
-
-!!! hint "英法对照"
-
-	|法|英| 
-	| ------------- |:---------------:| 
-	|Temps de réponse à 5%(Tr5%)|setting time| 
-	|Temps de montée (Tm10-90)|rise time|
-	|Peak réponse de dépassement|peak ampititude, overshot,at time|
-	|Erreur de position|final value|
-	|Coef amortissement|damping raito|
-	|pulsation propre $\omega$(rad/s)|natural frequence f*2$\pi$|
-
-## II Matlab 公式
-
-!!! hint "Matlab 公式"
-		conv (A, B)
-		roots( )
-		p=poly(r)
-		charpoly()
-
-		传递函数 num,den
-		对线性定常系统，s的系数均为常数，且den的常数项不等于0
-		sys= tf (num, den)
-
-		提取分子分母多项式系数的函数tfdata( )。格式：[num,den]=tfdata(sys, ‘v’)
-		sys传递函数。v功能：返回分子分母多项式系数向量。
-
-		siso零极点模型
-		sys= zpk (z, p, k)
-		Zero,pole,gain
-
-		提取模型零极点增益向量的函数
-		[z, p, k]=zpkdata(sys, ‘v’)
-
-		建立状态空间模型的函数
-		sys=ss(A,B,C,D)
-
-		特征根 传递函数分母的根
-
-		微分方程
-
-		线性时不变系统（LTI）的模型：
-		传递函数（Transfer Function）模型TF
-		零极点增益（ZPK）模型ZPK
-		状态空间（State Space）模型SS
-		P33
-
-		z，p向量 k标量
-
-		模型连接：串联series，并联parallel
-
-		求闭环传递函数的MATLAB函数cloop( )和feedback( )
-		其中cloop( )函数只能用于H(s)=1（即单位反馈）
-		[numc, denc]=cloop(num, den, sign)
-
-		[num, den]=feedback(num1, den1, num2, den2, sign)
-		num1, den1：G(s) 的分子、分母多项式
-		num2, den2: H(s)的分子、分母多项式
-		sign= -1 为负反馈（默认值），sign=1 为正反馈
-		P44
-
-		电感 微分器
-		电容 积分器
-
-		拉普拉斯变换
-
-		阶跃响应
-		step(tf)
-		grid on
-
-
-		利用simulink的提取线性模型函数 linmod( ), 得到状态空间模型，然后对状态空间模型进行各种仿真。
-
-		[A,B,C,D]=linmod(‘samples_4_14’);
-		[num,den]=ss2tf(A,B,C,D);
-		printsys(num,den,’s’) %以传递函数形式显示出来
-
-
 
 ## TD习题
 ### TD01
@@ -1207,12 +1171,13 @@ eig(Ar)
 ### TD06
 ![](images\cap_20171114_211417.png){:width="1000px"}
 
-!!! hint "5 équations"
-		1 moteur:
-		2 électromagnétique:
-		1 mécanique:
-		1 hydraulique:
-
+{% note success %}
+	"5 équations"
+1 moteur:
+2 électromagnétique:
+1 mécanique:
+1 hydraulique:
+{% endnote %}
 
 ~~~python
 clc
@@ -1304,9 +1269,10 @@ p2=-kesi*omega0mini-1i*omega0mini*sqrt(1-kesi^2);
 	- ![](images\cap_20171114_180018.png)
 	- ![](images\cap_20171114_175732.png)
 	
-!!! question "如果结果很奇怪，那就更改solver"
-	![](images\cap_20171114_181247.png)
-
+{% note success %}
+	"如果结果很奇怪，那就更改solver"
+![](images\cap_20171114_181247.png)
+{% endnote %}
 性能指标参数：
 
 	Tr5%=0.475	tm10-90=0.144	D%=15.6	e0=0
@@ -1624,9 +1590,6 @@ e0=1-0.986; % = 0.014
 ![](images\cap_20171128_211004.png)
 
 
-!!! question ""
-	P的取值什么时候为 dans un rapport 10 avec les valeurs reel pole dominant ？？？
-
 ## 6.LQR、FTBF的pôle
 ![](images\cap_20171122_132856.png)
 
@@ -1654,12 +1617,6 @@ R=rho*r1;
 ![](images\cap_20171128_211102.png)
 
 
-- Q
-
-!!! question ""
-	已经知道u.maxi,如何计算rho  ????
-	Pole de FTBF怎么算  ????
-	计算L时，pôle的值什么时候取 dans un rapport 5 pour pole d'observateur
 
 ## 7. 观测器
 ![](images\cap_20171122_133034.png)
@@ -1680,67 +1637,6 @@ L=place(A.',C.',Pob).';
 ![](images\cap_20171128_211305.png)
 
 # Part B 离散信号处理
-
-## 序
-- 疑问
-	- margin state
-	- 波特图
-	- 确定系数：r0 r1
-	- 为什么要变3阶
-	- p1 p2 p3怎么确定
-	- lerreur de position, vitesse
-
-- 连续信号的采样会导致信息丢失
-	- 采样周期
-	- 数值取整数 quantization
-		- 缩小 step size
-	- 数据延迟
-		- 处理周期：测量，数字化，算法，处理
-		- 延迟缩小了带宽
-	-电脑可以减少信息损耗
-
-- 基本结构
-![](images\cap_20171220_145521.png)
-- discrete controller：
-	+ Z 转化，应用于比较方程
-	+ S 转化，应用于微分方程
-	+ Z domain 用来创建比较方程
-- 创建 digital z domain controller 的三种方法：
-![](images\cap_20171220_150306.png)
-![](images\cap_20171220_150743.png)
-
-- 缺陷：
-	+ 数字化会使高频信号损失，同时丢失了phase margin的稳定性。因为0.1s的采样增加了系统的phase lag
-
-
-- 数字化的具体方法
-![](images\cap_20171220_151834.png)
-- z变换不是全部内容
-	+ 数字化的方法
-		* 'zoh'
-		* 'foh'
-		* 'impulse'
-		* 'tustin' 只转换而没有hold过程
-		* 'matched' 只转换而没有hold过程
-		* 如果采样时间足够小，那么几种方法差别不大
-	+ impulse 更贴近Z转换的计算式 但是跟实际的函数差距比较大：两次采样数据之间没有ZOH,所以数据会回落。如果想要跟实际的数据贴近那就用ZOH
-![](images\cap_20171220_154803.png)
-![](images\cap_20171220_155000.png)
-
-ZOH的数学证明:
-![](images\cap_20171220_161121.png)
-![](images\cap_20171220_161057.png)
-![](images\cap_20171220_161527.png)
-![](images\cap_20171220_161745.png)
-
-
-注意：
-![](images\cap_20171220_162818.png)
-![](images\cap_20171220_163303.png)
-![](images\cap_20171220_164242.png)
-
-
-
 
 ## I) Z 变换
 Transformée en Z
@@ -1886,10 +1782,11 @@ Donc,
 **FTBF à retour Non-unitaire**
 ![](images\cap_20171220_221330.png)
 
-!!! caution "系统稳定的条件"
-	在1+FTBO(z)=0条件下求得的根，其绝对值小于1
-	Dans ces conditions un système bouclé est stable si les racines de son équation caractéristique 1+FTBO(z)=0 ont, chacune, leur module inférieur à 1.
-
+{% note success %}
+	"系统稳定的条件"
+在1+FTBO(z)=0条件下求得的根，其绝对值小于1
+Dans ces conditions un système bouclé est stable si les racines de son équation caractéristique 1+FTBO(z)=0 ont, chacune, leur module inférieur à 1.
+{% endnote %}
 #### 1.2 Critère de Jury 朱利判据
 
 **两个条件:**
@@ -1938,9 +1835,10 @@ Donc,
 ![](images\cap_20171221_000749.png)
 ![](images\cap_20171221_001154.png)
 
-!!! hint "失稳"
-	因为误差只在采样的时候才计算，所以增加了系统的不稳定性
-
+{% note success %}
+	"失稳"
+因为误差只在采样的时候才计算，所以增加了系统的不稳定性
+{% endnote %}
 #### 1.5 Correspondance plan p – plan z
 ![](images\cap_20171221_001606.png)
 
@@ -1987,9 +1885,10 @@ Les résultats obtenus sont tout à fait comparables à ceux obtenus pour les sy
 
 Mais  attention :  le  calcul  n'est  effectué  qu'aux  instants  d'échantillonnnage  et  en  régime permanent. Les exigences fixées sur le nombre d'intégrateurs vont influencer très certainement le régime transitoire. Si la période d'échantillonnage est mal choisie (trop longue), le réglage sera très mauvais malgré une erreur nulle aux instants d'échantillonnage.
 
-!!! hint "注意"
-	积分器会很大程度上影响 transitoire
-
+{% note success %}
+	"注意"
+积分器会很大程度上影响 transitoire
+{% endnote %}
 ## IV) 系统的数字化
 systèmes échantillonnés
 ### 1 Introduction
@@ -2108,9 +2007,10 @@ Le régulateur PI a pour transformée de Laplace :
 #### 2.2Régulateur PID numérique.
 ![](images\cap_20171224_203459.png)
 
-!!! danger "不是最优结构"
-	由于微分器的存在放大了噪声，所以这个结构不是最好的，需要加入PID滤波器
-
+{% note success %}
+	"不是最优结构"
+由于微分器的存在放大了噪声，所以这个结构不是最好的，需要加入PID滤波器
+{% endnote %}
 	Cette structure n'est pas la meilleure à cause de la dérivée qui amplifie le bruit dans les hautes fréquences. Dans ce cas, il est préférable d'utiliser un correcteur PID filtré. Cependant, à titre illustratif, nous donnons le calcul de la discrétisation de ce PID. 
 
 #### 2.3 Régulateur PID filtré numérique.
@@ -2122,9 +2022,10 @@ Le régulateur PI a pour transformée de Laplace :
 
 La structure des correcteurs PID avec un réglage par placement des pôles n'autorise que des processus du premier et second ordre. 
 
-!!! hint ""
-	带有放置极点位置的调节器的PID只能用在1阶和2阶过程上
-
+{% note success %}
+	""
+带有放置极点位置的调节器的PID只能用在1阶和2阶过程上
+{% endnote %}
 #### 3.2Processus du premier ordre.
 ![](images\cap_20171224_210425.png)
 
@@ -2133,11 +2034,12 @@ La structure des correcteurs PID avec un réglage par placement des pôles n'aut
 #### 3.3Processus du second ordre
 ![](images\cap_20171224_211214.png)
 
-!!! note "a1, a2, b1, b2"
-	- a1, a2, b1, b2
-		+ 1. les pôles complexes
-		+ 2. les pôles réels
-
+{% note success %}
+	"a1, a2, b1, b2"
+- a1, a2, b1, b2
++ 1. les pôles complexes
++ 2. les pôles réels
+{% endnote %}
 ##### 3.3.1 Cas des pôles complexes
 ![](images\cap_20171224_213344.png)
 
@@ -2176,9 +2078,10 @@ Dans le cas d'un simplification entre les pôles et les zéros du correcteur, le
 
 Dans le cas contraire, nous aurons un quatrième ordre dont les quatre pôles peuvent être fixés. Ce  deuxième cas aboutissant à des relations lourdes à gérer, nous ne traiterons que la première proposition.
 
-!!! hint ""
-	- `processus` 和 `correcteur` 的阶数都为`2`
-
+{% note success %}
+	""
+- `processus` 和 `correcteur` 的阶数都为`2`
+{% endnote %}
 
 Le schéma-bloc de l'ensemble processus-correcteur est le suivant :
 
@@ -2229,12 +2132,13 @@ Si vous faites ce choix d'échantillonnage correct, approximativement entre le d
 
 - 7.总结
 
-!!! hint "套路"
-	- Problème: trouver les polynômes $\Theta(z)$ et $\Pi(z)$. Cela revient à résoudre l'équation Diophantienne.
-		- On fixe le régime transitoire avec le polynôme $D_{BF}(z)=N^{-}(z)\Theta(z)+ D^{-}(z)S_{r}(z)\Pi(z)$ équation Diophantienne(connue).
-		- On fixe le type d'erreur à annuler en régime permanent $S_{r}(z)$(connu).
-		- On fixe de plus une valeur à l'erreur d'ordre immédiatement supérieur (possibilité).
-
+{% note success %}
+	"套路"
+- Problème: trouver les polynômes $\Theta(z)$ et $\Pi(z)$. Cela revient à résoudre l'équation Diophantienne.
+- On fixe le régime transitoire avec le polynôme $D_{BF}(z)=N^{-}(z)\Theta(z)+ D^{-}(z)S_{r}(z)\Pi(z)$ équation Diophantienne(connue).
+- On fixe le type d'erreur à annuler en régime permanent $S_{r}(z)$(connu).
+- On fixe de plus une valeur à l'erreur d'ordre immédiatement supérieur (possibilité).
+{% endnote %}
 
 ### 举例
 ![](images\cap_20171225_003749.png)
@@ -2254,21 +2158,22 @@ Si vous faites ce choix d'échantillonnage correct, approximativement entre le d
 		* gain statique `T0=1`
 	+ Période échantillonnage `Te=0.72`
 
-!!! hint "思路："
-	- 构建processus的传递函数
-	- 根据CdCs构建要求的传递函数
-	- 通过线性方程求corresctur的参数
-		+ déterminer les polynômes $\Theta$(z) et $\Pi$(z) de l'équation Diophantienne $D_{BF}(z)=N^{-}(z)\Theta(z)+ D^{-}(z)S_{r}(z)\Pi(z)$ 
-		+ Erreur position nulle , il faut donc un intégrateur Sr=(1-z^-1)
-		+ Erreur de vitesse = 0.5 $\Rightarrow$ ev = $\frac{D^{-}(1).Ky(1).PI(1)}{DBF(1)}$ `DBF(1)=sum(D1d)` pour une rampe `Ky(1)=Te`
-	- 构建corresteur K(z)
-		+ $K(z)=\frac{D^{+}(z)S_{m}(z)\Theta(z)}{N^{+}(z)S_{r}(z)\Pi(z)}$
-		+ 其中:
-			* $D^{+}(z): Processus的TF方程的分母 \Rightarrow$ Dstable=tf(F0d.den{1},1,Te)
-			* $S_{m}(z)$: 有integrateur:$(1-z^{-1})$没:1
-			* $\Theta(z)$: 求解线性方程所得的 $\Pi$ 值的集合 $\Rightarrow$ Theta=tf(theta,1,Te)
-			* $N^{+}(z)$: Processus的TF方程的 `增益k`$\times$`[1 零点的相反数]` $\Rightarrow$ [z0,k0]=zero(F0d); Nstable=tf(1,k0*[1 -z0],Te) 
-
+{% note success %}
+	"思路："
+- 构建processus的传递函数
+- 根据CdCs构建要求的传递函数
+- 通过线性方程求corresctur的参数
++ déterminer les polynômes $\Theta$(z) et $\Pi$(z) de l'équation Diophantienne $D_{BF}(z)=N^{-}(z)\Theta(z)+ D^{-}(z)S_{r}(z)\Pi(z)$ 
++ Erreur position nulle , il faut donc un intégrateur Sr=(1-z^-1)
++ Erreur de vitesse = 0.5 $\Rightarrow$ ev = $\frac{D^{-}(1).Ky(1).PI(1)}{DBF(1)}$ `DBF(1)=sum(D1d)` pour une rampe `Ky(1)=Te`
+- 构建corresteur K(z)
++ $K(z)=\frac{D^{+}(z)S_{m}(z)\Theta(z)}{N^{+}(z)S_{r}(z)\Pi(z)}$
++ 其中:
+* $D^{+}(z): Processus的TF方程的分母 \Rightarrow$ Dstable=tf(F0d.den{1},1,Te)
+* $S_{m}(z)$: 有integrateur:$(1-z^{-1})$没:1
+* $\Theta(z)$: 求解线性方程所得的 $\Pi$ 值的集合 $\Rightarrow$ Theta=tf(theta,1,Te)
+* $N^{+}(z)$: Processus的TF方程的 `增益k`$\times$`[1 零点的相反数]` $\Rightarrow$ [z0,k0]=zero(F0d); Nstable=tf(1,k0*[1 -z0],Te) 
+{% endnote %}
 ~~~matlab hl_lines="1 15 26 43"
 %%%% Le processus analogique TFBO
 Te=0.72; % Période échantillonnage
@@ -2402,9 +2307,10 @@ den0=[TauxBO 1];
 Tm=tf(num0,den0,'variable','p')    % Tm fonction de transfert continue
 ~~~
 
-!!! note "Output"
-	Tm = `0.2439 / (0.09756 p + 1)`
-
+{% note success %}
+	"Output"
+Tm = `0.2439 / (0.09756 p + 1)`
+{% endnote %}
 #### Ex03 Discrétisation du processus
 La période d'échantillonnage du processus à discrétiser est Te choisie est de 50ms.
 
@@ -2421,16 +2327,17 @@ Tmd=c2d(Tm,Te)		% Tmd fonction de transfert discrétisée
 Tauxp = stepinfo(Tmd,'RiseTimeLimits',[0,0.63])
 ~~~
 
-!!! note "Tauxp"
-	RiseTime: 0.08
-	SettlingTime: 0.4
-	SettlingMin: 0.156391105998548
-	SettlingMax: 0.243902416439551
-	Overshoot: 0
-	Undershoot: 0
-	Peak: 0.243902416439551
-	PeakTime: 1.58
-
+{% note success %}
+	"Tauxp"
+RiseTime: 0.08
+SettlingTime: 0.4
+SettlingMin: 0.156391105998548
+SettlingMax: 0.243902416439551
+Overshoot: 0
+Undershoot: 0
+Peak: 0.243902416439551
+PeakTime: 1.58
+{% endnote %}
 - 3.2 Établir la fonction de transfert du moteur : 
 ![](images\cap_20171214_122711.png)
 
@@ -2440,10 +2347,11 @@ b1=Tmd.num{1}(2);				% coefficient numérateur de Tmd
 a1=T0d.den{1}(2);				% coefficient dénonominateur de Tmd
 ~~~
 
-!!! note "Output"
-	b1 = 0.0978058012558279
-	a1 = -0.598996214851105
-
+{% note success %}
+	"Output"
+b1 = 0.0978058012558279
+a1 = -0.598996214851105
+{% endnote %}
 #### Ex04 Étude de différents correcteurs
 ![](images\cap_20171214_122831.png)
 
@@ -2486,9 +2394,10 @@ sgrid(Zeta,frequence);
 
 ~~~
 
-!!! note "Commenter"
-	Faut que le point reste dans le circle
-
+{% note success %}
+	"Commenter"
+Faut que le point reste dans le circle
+{% endnote %}
 ##### 4.2 Correcteur PI :
 ![](images\cap_20171214_124530.png)
 Nous choisissons comme comportement en boucle fermé un système du premier ordre avec une
@@ -2537,9 +2446,10 @@ Kpi=tf(numPI,denPI,Te,'variable','z');	%Fonction de transfert du correcteur PI
 
 ~~~
 
-!!! note "Output"
-	Kpi = `(8.907z-5.335)/(z-1)`
-
+{% note success %}
+	"Output"
+Kpi = `(8.907z-5.335)/(z-1)`
+{% endnote %}
 - 4.2.3 Déterminer la réponse à échelon de le temps de réponse à 5%.
 
 ~~~matlab
@@ -2551,16 +2461,17 @@ step(T1,T1d,Tmd_BFpi);
 Steady_timePI=stepinfo(Tmd_BFpi,'SettlingTimeThreshold',0.05)
 ~~~
 
-!!! note "Output"
-	RiseTime: 0.05
-    SettlingTime: 0.1
-	SettlingMin: 0.983400133996619
-	SettlingMax: 1
-	Overshoot: 2.22044604925031e-14
-	Undershoot: 0
-	Peak: 1
-	PeakTime: 0.9
-
+{% note success %}
+	"Output"
+RiseTime: 0.05
+SettlingTime: 0.1
+SettlingMin: 0.983400133996619
+SettlingMax: 1
+Overshoot: 2.22044604925031e-14
+Undershoot: 0
+Peak: 1
+PeakTime: 0.9
+{% endnote %}
 - 4.2.4 Déterminer l'erreur de position et l'erreur de vitesse. 
 
 
@@ -2642,12 +2553,12 @@ DP=Tmd.den{1}     % dénominateur du sytème en B0
 
 
 
-TD06
-1. 建立微分方程
+### TD06
+#### 1. 建立微分方程
 ![](images\cap_20171222_152831.png)
 ![](images\cap_20171222_155836.png)
 
-3.1 数字化
+#### 3.1 数字化
 ![](images\cap_20171222_155940.png)
 
 ~~~matlab hl_lines="1 8 16"
@@ -2675,7 +2586,7 @@ zpk(Tmd,'v')		%Pour voir ou sont les poles ( 'v') est la car c'est une output
 
 
 
-3.2
+#### 3.2 读取系数
 ![](images\cap_20171222_160043.png)
 
 ~~~python hl_lines="1"
@@ -2686,7 +2597,7 @@ a1=Tmd.den{1}(2)
 a2=Tmd.den{1}(3)
 ~~~
 
-4.1
+#### 4.1 %5 responce
 ![](images\cap_20171222_160122.png)
 
 ~~~python hl_lines="1 14"
@@ -2709,7 +2620,7 @@ sisotool(Tmd_BFp);
 ~~~
 
 
-4.2
+#### 4.2 PID filtre
 ![](images\cap_20171222_160234.png)
 
 ~~~python hl_lines="1 9 18 23"
@@ -2743,7 +2654,7 @@ Steady_timePID=stepinfo(Tmd_BFpid,'SettlingTimeThreshold',0.05)
 step(T1,T1d,Tmd_BFpid)
 ~~~
 
-5.
+#### 5. 误差分析
 ![](images\cap_20171222_160303.png)
 
 ~~~python hl_lines="1"
@@ -2767,3 +2678,151 @@ Kt=(Gamma_trainage)/(Tmd*(1-Gamma_trainage)); %FT de tranage
 ~~~
 
 
+
+
+
+# 附录
+## I 英法对照
+
+{% note success %}
+	"英法对照"
+|法|英| 
+| ------------- |:---------------:| 
+|Temps de réponse à 5%(Tr5%)|setting time| 
+|Temps de montée (Tm10-90)|rise time|
+|Peak réponse de dépassement|peak ampititude, overshot,at time|
+|Erreur de position|final value|
+|Coef amortissement|damping raito|
+|pulsation propre $\omega$(rad/s)|natural frequence f*2$\pi$|
+{% endnote %}
+## II Matlab 公式
+
+{% note success %}
+	"Matlab 公式"
+conv (A, B)
+roots( )
+p=poly(r)
+charpoly()
+{% endnote %}
+		传递函数 num,den
+		对线性定常系统，s的系数均为常数，且den的常数项不等于0
+		sys= tf (num, den)
+
+		提取分子分母多项式系数的函数tfdata( )。格式：[num,den]=tfdata(sys, ‘v’)
+		sys传递函数。v功能：返回分子分母多项式系数向量。
+
+		siso零极点模型
+		sys= zpk (z, p, k)
+		Zero,pole,gain
+
+		提取模型零极点增益向量的函数
+		[z, p, k]=zpkdata(sys, ‘v’)
+
+		建立状态空间模型的函数
+		sys=ss(A,B,C,D)
+
+		特征根 传递函数分母的根
+
+		微分方程
+
+		线性时不变系统（LTI）的模型：
+		传递函数（Transfer Function）模型TF
+		零极点增益（ZPK）模型ZPK
+		状态空间（State Space）模型SS
+		P33
+
+		z，p向量 k标量
+
+		模型连接：串联series，并联parallel
+
+		求闭环传递函数的MATLAB函数cloop( )和feedback( )
+		其中cloop( )函数只能用于H(s)=1（即单位反馈）
+		[numc, denc]=cloop(num, den, sign)
+
+		[num, den]=feedback(num1, den1, num2, den2, sign)
+		num1, den1：G(s) 的分子、分母多项式
+		num2, den2: H(s)的分子、分母多项式
+		sign= -1 为负反馈（默认值），sign=1 为正反馈
+		P44
+
+		电感 微分器
+		电容 积分器
+
+		拉普拉斯变换
+
+		阶跃响应
+		step(tf)
+		grid on
+
+
+		利用simulink的提取线性模型函数 linmod( ), 得到状态空间模型，然后对状态空间模型进行各种仿真。
+
+		[A,B,C,D]=linmod(‘samples_4_14’);
+		[num,den]=ss2tf(A,B,C,D);
+		printsys(num,den,’s’) %以传递函数形式显示出来
+
+## III 数字采样补充说明
+
+- 连续信号的采样会导致信息丢失
+	- 采样周期
+	- 数值取整数 quantization
+		- 缩小 step size
+	- 数据延迟
+		- 处理周期：测量，数字化，算法，处理
+		- 延迟缩小了带宽
+	-电脑可以减少信息损耗
+
+- 基本结构
+![](images\cap_20171220_145521.png)
+- discrete controller：
+	+ Z 转化，应用于比较方程
+	+ S 转化，应用于微分方程
+	+ Z domain 用来创建比较方程
+- 创建 digital z domain controller 的三种方法：
+![](images\cap_20171220_150306.png)
+![](images\cap_20171220_150743.png)
+
+- 缺陷：
+	+ 数字化会使高频信号损失，同时丢失了phase margin的稳定性。因为0.1s的采样增加了系统的phase lag
+
+
+- 数字化的具体方法
+![](images\cap_20171220_151834.png)
+- z变换不是全部内容
+	+ 数字化的方法
+		* 'zoh'
+		* 'foh'
+		* 'impulse'
+		* 'tustin' 只转换而没有hold过程
+		* 'matched' 只转换而没有hold过程
+		* 如果采样时间足够小，那么几种方法差别不大
+	+ impulse 更贴近Z转换的计算式 但是跟实际的函数差距比较大：两次采样数据之间没有ZOH,所以数据会回落。如果想要跟实际的数据贴近那就用ZOH
+![](images\cap_20171220_154803.png)
+![](images\cap_20171220_155000.png)
+
+ZOH的数学证明:
+![](images\cap_20171220_161121.png)
+![](images\cap_20171220_161057.png)
+![](images\cap_20171220_161527.png)
+![](images\cap_20171220_161745.png)
+
+
+注意：
+![](images\cap_20171220_162818.png)
+![](images\cap_20171220_163303.png)
+![](images\cap_20171220_164242.png)
+
+
+### IV 待解决疑问
+
+- 疑问
+	- margin state
+	- 波特图
+	- 确定系数：r0 r1
+	- 为什么要变3阶
+	- p1 p2 p3怎么确定
+	- lerreur de position, vitesse
+	- P的取值什么时候为 dans un rapport 10 avec les valeurs reel pole dominant ？？？
+	- 已经知道u.maxi,如何计算rho  ????
+	- Pole de FTBF怎么算  ????
+	- 计算L时，pôle的值什么时候取 dans un rapport 5 pour pole d'observateur
