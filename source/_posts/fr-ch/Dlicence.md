@@ -22,9 +22,9 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 <!-- more -->
 
 
-#整理
+# 整理
 
-##1.驾照
+## 1.驾照
 - 前期准备
 	+ 理论
 		* AAC 15岁
@@ -52,7 +52,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 - 获得法国驾照5年内可以免E.T.G.考取另一种类驾照
 ![](picaudio\cap_20171205_153902.png)
 
-##2.地标以及限速
+## 2.地标以及限速
 - 限速
 	+ **市**内或者**雾**天 `50` $_{(14 m/s)}$ **1条分道线**
 	+ **双向**公路 `90` $_{(25 m/s)}$ `下雨/实习 80` **5条分道线**
@@ -88,13 +88,13 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 {% endnote %}
 
 
-##3. 超车
+## 3. 超车
 - 车速差20 
 	+ `70k/h` 需要`250m` `12秒`完成
 	+ 左道最低80km/h
 	+ 禁止右边超车
 
-##4.违规和罚款 一次最多8分 
+## 4.违规和罚款 一次最多8分 
 |行为|等级|处罚|
 | ------------- |:---------------:| :---------------:|
 |特别危险停车|4e|135€| 
@@ -135,7 +135,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 	+ AAC 3 pendant 2 ans
 	+ 其他 2 pendant 3 ans
 
-##5.可视角度
+## 5.可视角度
 |速度km/h|角度°| 
 | ------------- |:---------------:| 
 |30|120| 
@@ -143,7 +143,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 |100|45|
 |130|30|
 
-##6.灯
+## 6.灯
 
 |时空|情况|灯 |
 | ------------- |:---------------:|:---------------:| 
@@ -166,7 +166,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 {% endnote %}
 
 
-##7.饮酒
+## 7.饮酒
 - 下饭的话，`1~2小时`达到顶峰; 空腹只需要`15~30分钟`
 - 肝脏解95%的酒，一小时解决`0.1g/l~0.2g/l`,平均取`0.15g/l`
 - 红酒`12°200ml`=血液酒精浓度`0.5g/l`
@@ -180,7 +180,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 		+ 如果呈阳性 --> Ethylometre(血检)
 - 血液中`0.2g/l` = 呼气`0.1mg/l`
 
-##8.车检
+## 8.车检
 - 间隔
 	+ 新车满4年前6个月内要车检，之后两年一检查
 	+ 卖车6个月之内
@@ -189,7 +189,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 - 车检标签不能证明车子过检，必须查看灰卡上的timbre
 - 不拆车检查: 照明，刹车，减震的问题需要复查。2个月内修车，并复查
 
-##9.许可吨位PTAC
+## 9.许可吨位PTAC
 (Pois total autorise en charge)
 - B驾照
 	+ 拖车750kg (超过500kg需要单独的灰卡)
@@ -204,7 +204,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 	+ 例: `PV1912`kg + `PTAC`3500kg(裸车minibus) + `PTAC`850kg(拖车)  
 
 
-##10.文件
+## 10.文件
 - 强制文件
 	+ 驾照
 	+ 灰卡(certificat d'immatriculation) 搬家要在一个月内通知改地址
@@ -222,7 +222,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 	- constat amiable和解笔录发给保险公司
 		+ 自事故起5个工作日，被偷的话2个工作日
 
-##11.急救
+## 11.急救
 
 - 已经在实施急救措施 --> 避免停车
 - 刚发生事故 必须停车急救伤员
@@ -260,12 +260,12 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 		* defibrillateur
 - 保险单子全欧洲通用，填完后正面不能修改
 
-##12.轮胎
+## 12.轮胎
 - 上高速前增加200~300g的胎压
 - 备胎限速80km/h
 - 轮胎热 胎压增大0.3bar
 
-##13.儿童座椅
+## 13.儿童座椅
 ![](picaudio\cap_20171205_164102.png)
 
 - 矮于135cm必备
@@ -273,7 +273,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 - 儿童安全≠中央锁定
 - 后背朝前的座椅要关闭安全气囊
 
-##14.摩托车和某些3轮
+## 14.摩托车和某些3轮
 - 在所有的道路上 interfiles 限速50 靠左行驶
 - en interfiles 实验性的
 	+ 道路要求：
@@ -288,7 +288,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 		* le Rhone
 		* Ile-de-France, le boulevard peripherique parisien
 		* Toute la région parisienne
-##15.艰难错车
+## 15.艰难错车
 
 {% note success %}
 	""
@@ -298,8 +298,9 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 {% endnote %}
 
 
-#模拟练习题
-##Ex 09
+# 模拟练习题
+
+## Ex 09
 ### 酒驾测试
 ![](picaudio\cap_20171203_223601.png)
 <audio controls><source src="picaudio\f8a6998f-8dd9-400a-8ba9-e61ad1213e16.mp3"  ></audio>
@@ -466,7 +467,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 
 
 
-# Ex 08
+## Ex 08
 
 ### 安全带
 ![](picaudio\cap_20171203_234608.png)
@@ -681,7 +682,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 <audio controls><source src="picaudio\9a8646c9-77cb-448f-8098-4016eb1f926d.mp3" ></audio>
 
 
-##Ex 07
+## Ex 07
 ### 毒品
 ![](picaudio\cap_20171204_132947.png)
 ![](picaudio\cap_20171204_133115.png)
@@ -879,7 +880,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 ![](picaudio\cap_20171204_145323.png)
 
 
-##Ex 06
+## Ex 06
 ### 视野
 ![](picaudio\cap_20171204_145533.png)
 ![](picaudio\cap_20171204_145653.png)
@@ -1109,7 +1110,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 <audio controls><source src="picaudio\3ae12b73-53ab-4100-8b17-7d8b5dbf9450.mp3" ></audio>
 
 
-##Ex 05
+## Ex 05
 
 ### 雨天
 ![](picaudio\cap_20171204_170424.png)
@@ -1309,7 +1310,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 <audio controls><source src="picaudio\8a7c9087-93ad-41cc-a4f6-279ce6322763.mp3" ></audio>
 
 
-##Ex 04
+## Ex 04
 ### 睡意
 ![](picaudio\cap_20171204_175753.png)
 ![](picaudio\cap_20171204_175804.png)
@@ -1509,7 +1510,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 <audio controls><source src="picaudio\b530b42b-d888-456b-b0ec-c110ac0d02f1.mp3" ></audio>
 
 
-##Ex 03
+## Ex 03
 ### 耀眼 (隧道 夜晚
 ![](picaudio\cap_20171204_190756.png)
 ![](picaudio\cap_20171204_190808.png)
@@ -1680,7 +1681,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 ![](picaudio\cap_20171204_200339.png)
 ![](picaudio\cap_20171204_200402.png)
 
-##Ex 02
+## Ex 02
 ### 违抗指令
 ![](picaudio\cap_20171204_201005.png)
 <audio controls><source src="picaudio\45d11f1b-72dd-43a5-a2f0-905a6aa22887.mp3" ></audio>
@@ -1789,7 +1790,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 <audio controls><source src="picaudio\1111e46d-9af8-4bef-9175-fccfca85fd47.mp3" ></audio>
 
 
-##Ex 01
+## Ex 01
 
 ### 开车打电话
 ![](picaudio\cap_20171204_205004.png)
@@ -1943,7 +1944,7 @@ Suite à la réforme du Code de la route de Mai 2016 visant à dépoussiérer l�
 <audio controls><source src="picaudio\a70776e7-4059-4d1f-a43b-5431785b248c.mp3" ></audio>
 
 
-##Ex 10
+## Ex 10
 
 ### 有经验预见远
 ![](picaudio\cap_20171205_194906.png)
