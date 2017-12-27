@@ -9,11 +9,9 @@ mathjax: true
 description: Personnel Update
 ---
 
-
-
-
 # DayPo
 
+<!-- more -->
 #2017-11-19 14:26:53 星期日
 ##王阳明哲学 蔡仁厚 牟宗三
 - 佛学和儒学的区别
