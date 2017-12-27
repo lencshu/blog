@@ -72,4 +72,7 @@ deploy:
   repository: git@github.com:lencshu/gliang.eu.git
   branch: master
 
-
+lazyload:
+  enable: true
+  # className: #optional e.g. .J-lazyload-img 
+  # loadingImg: #optional eg. ./images/loading.png 
