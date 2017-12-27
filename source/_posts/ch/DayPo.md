@@ -114,7 +114,7 @@ description: Personnel Update
 				+ 亚洲季风地带
 			- 谁控制了边缘地带，谁就统治欧亚，谁就统治世界
 			- 第一岛链
-![](C:\Users\lencs\Desktop\DayPo\Medias\cap_20171205_003054.png)
+![](Medias\cap_20171205_003054.png)
 
 #2017-12-15 23:01:07 星期五
 - 驾照理论已过
