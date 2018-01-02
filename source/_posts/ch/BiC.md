@@ -1,5 +1,3 @@
-[TOC]
-
 ---
 title: 比特币
 permalink: 
